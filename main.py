@@ -28,7 +28,7 @@ class BankAccount():
             #this should charge you 10 dollars when you overdraft #thanksAsIfIWeren'tAlreadyBroke
             #prints out a message
 
-            return f"{self.full_name}, you have Insufficient Funds, we have charged you $10 for an overdraft fee. You're  Welcome! \n Your updated balance is ${self.balance}"
+            return print(f"{self.full_name}, you have Insufficient Funds, we have charged you $10 for an overdraft fee. You're  Welcome! \n Your updated balance is ${self.balance}")
 
 
     def get_balance(self):
@@ -53,13 +53,14 @@ initial_balance = 0
 
 test_account = BankAccount("Sawyer Cherry", generateAccountNum(), routing_num, initial_balance)
 
-test_account.deposit(100)
+test_account.deposit(1000)
+test_account.deposit(1000)
 
-test_account.withdraw(150)
+#test_account.withdraw(3000)
 
 #print(test_account.get_balance())
 
 #print(test_account.addInterest())
 
-#print(test_account.print_receipt("Sawyer Cherry", test_account.account_number, routing_num, test_account.get_balance()))
+print(test_account.print_receipt("Sawyer Cherry", test_account.account_number, routing_num, test_account.get_balance()))
       
